@@ -51,7 +51,7 @@
                             {{ product.price | currency:'AUD':true:'1.2-2'}}
                         </td>
                         <td>
-                            {{ product.starRating }}
+                            <ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)' ></ai-star>
                         </td>
                     </tr>
                 </tbody>
